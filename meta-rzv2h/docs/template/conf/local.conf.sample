@@ -288,7 +288,7 @@ DISTRO_FEATURES_NATIVESDK_remove = " x11"
 #  - Bullseye          : build all supported Debian 11 Bullseye recipes
 #  - Not set (or different with above): not use CIP Core, use default packages version in Yocto
 
-CIP_MODE = "Buster"
+#CIP_MODE = "Buster"
 
 INCOMPATIBLE_LICENSE = "GPLv3 GPLv3+"
 
@@ -327,7 +327,7 @@ WKS_DEFAULT_FILE_rzv2h-dev = "rz-image-bootpart-mmc.wks"
 WKS_DEFAULT_FILE_rzv2h-evk-alpha = "rz-image-bootpart-esd_rzv2h.wks"
 WKS_DEFAULT_FILE_rzv2h-evk-ver1 = "rz-image-bootpart-esd_rzv2h.wks"
 # Defines additional free disk space created in the image in Kbytes.
-IMAGE_ROOTFS_EXTRA_SPACE = "1048576"
+IMAGE_ROOTFS_EXTRA_SPACE = "8388608"
 
 # Generate spdx files
 #INHERIT += "create-spdx"
@@ -337,3 +337,5 @@ IMAGE_ROOTFS_EXTRA_SPACE = "1048576"
 # - SPDX_ARCHIVE_PACKAGED: Add compressed archives of the files in the generated target packages.
 #SPDX_PRETTY = "1"
 #SPDX_ARCHIVE_PACKAGED = "1"
+
+IMAGE_INSTALL_append = " tesseract tesseract-lang "
