@@ -10,6 +10,9 @@ RZ_FEATURE_CODEC = "${@os.path.isdir("${TOPDIR}/../meta-rz-features/meta-rz-code
 RZ_FEATURE_GRAPHICS = "${@os.path.isdir("${TOPDIR}/../meta-rz-features/meta-rz-graphics")}"
 RZ_FEATURE_DRPAI = "${@os.path.isdir("${TOPDIR}/../meta-rz-features/meta-rz-drpai")}"
 RZ_FEATURE_OPENCVA = "${@os.path.isdir("${TOPDIR}/../meta-rz-features/meta-rz-opencva")}"
+RZ_FEATURE_ISP = "${@os.path.isdir("${TOPDIR}/../meta-rz-features/meta-rz-isp")}"
+RZ_FEATURE_SECURITY = "${@os.path.isdir("${TOPDIR}/../meta-rz-features/meta-rz-security")}"
+RZ_FEATURE_MULTIOS = "${@os.path.isdir("${TOPDIR}/../meta-rz-features/meta-rz-multi-os/meta-rzv2h")}"
 VIRTUALIZATION_LAYER = "${@os.path.isdir("${TOPDIR}/../meta-virtualization")}"
 
 BBLAYERS ?= " \
@@ -28,7 +31,7 @@ BBLAYERS ?= " \
   ${@'${TOPDIR}/../meta-rz-features/meta-rz-graphics' if '${RZ_FEATURE_GRAPHICS}' == 'True' else ''} \
   ${@'${TOPDIR}/../meta-rz-features/meta-rz-drpai' if '${RZ_FEATURE_DRPAI}' == 'True' else ''} \
   ${@'${TOPDIR}/../meta-rz-features/meta-rz-opencva' if '${RZ_FEATURE_OPENCVA}' == 'True' else ''} \
-  ${@'${TOPDIR}/../meta-openembedded/meta-filesystems' if '${VIRTUALIZATION_LAYER}' == 'True' else ''} \
-  ${@'${TOPDIR}/../meta-openembedded/meta-networking' if '${VIRTUALIZATION_LAYER}' == 'True' else ''} \
-  ${@'${TOPDIR}/../meta-virtualization' if '${VIRTUALIZATION_LAYER}' == 'True' else ''} \
+  ${@'${TOPDIR}/../meta-rz-features/meta-rz-isp' if '${RZ_FEATURE_ISP}' == 'True' else ''} \
+  ${@'${TOPDIR}/../meta-rz-features/meta-rz-security' if '${RZ_FEATURE_SECURITY}' == 'True' else ''} \
+  ${@'${TOPDIR}/../meta-rz-features/meta-rz-multi-os/meta-rzv2h' if '${RZ_FEATURE_MULTIOS}' == 'True' else ''} \
   "
