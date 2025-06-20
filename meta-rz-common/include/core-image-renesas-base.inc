@@ -133,6 +133,10 @@ update_issue_rzv2h() {
       BSP_SOC="RZV2H"
       BSP_BOARD="RZV2H-DEV"
       ;;
+    rzv2h-onekiwi)
+      BSP_SOC="RZV2H"
+      BSP_BOARD="RZV2H_ONEKIWI"
+      ;;
     esac
 
     # Make issue file
