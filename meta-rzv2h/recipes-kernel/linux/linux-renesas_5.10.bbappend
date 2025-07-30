@@ -1,0 +1,18 @@
+DESCRIPTION = "Linux kernel for the RZ/V2H based board"
+
+COMPATIBLE_MACHINE_rzv2h = "(rzv2h-dev|rzv2h-evk-alpha|rzv2h-evk-ver1)"
+
+BRANCH = "rzv2h-5.10-cip17"
+SRCREV = "6375044a6e84009499405326a8d32634a0b88095"
+
+LINUX_VERSION = "5.10.145-cip17"
+
+SRC_URI_remove = " \
+	file://0001-Fixed-an-issue-that-caused-flicker-when-outputting-t.patch \
+"
+
+FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}/:"
+
+SRC_URI_append += "\
+	file://0001-rollback-cru.patch \
+"
