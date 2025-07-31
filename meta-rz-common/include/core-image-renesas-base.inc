@@ -140,6 +140,10 @@ update_issue_rzv2h() {
       AI_SDK_BOARD="RZ/V2H DEV"
       AI_SDK_SOC="RZ/V2H"
       ;;
+    rzv2h-onekiwi)
+      BSP_SOC="RZV2H"
+      BSP_BOARD="RZV2H_ONEKIWI"
+      ;;
     esac
 
     # Make issue file

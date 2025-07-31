@@ -127,9 +127,9 @@ You can get all Yocto build environment from Renesas, or download all Yocto rela
     $ git checkout 60b251c25ba87e946a0ca4cdc8d17b1cb09292ac
     $ cd ..
     $
-    $ git clone  https://github.com/renesas-rz/meta-renesas.git
+    $ git clone  https://github.com/OneKiwiEmbedded/meta-renesas-rzv2h.git meta-renesas
     $ cd meta-renesas
-    $ git checkout <tag>
+    $ git checkout onekiwi-dunfell/rzv2h-sdk-v5.20
     $ cd ..
     $
     $ git clone  https://github.com/meta-qt5/meta-qt5.git
