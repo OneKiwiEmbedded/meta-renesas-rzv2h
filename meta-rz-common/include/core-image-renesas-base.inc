@@ -128,6 +128,12 @@ update_issue_rzv2h() {
       AI_SDK_BOARD="RZ/V2H EVK"
       AI_SDK_SOC="RZ/V2H"
       ;;
+    rzv2h-onekiwi)
+      BSP_SOC="RZV2H"
+      BSP_BOARD="ONEKIWI_RZV2H"
+      AI_SDK_BOARD="ONEKIWI RZ/V2H"
+      AI_SDK_SOC="RZ/V2H"
+      ;;
     rzv2h-evk-alpha)
       BSP_SOC="RZV2H"
       BSP_BOARD="RZV2H_EVK_ALPHA"
